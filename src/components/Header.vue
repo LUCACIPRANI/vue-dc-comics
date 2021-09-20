@@ -37,7 +37,7 @@ export default {
   background-color: white;
   color: #000;
   font-weight: 500;
-  padding: 15px 0;
+  padding: 10px 0;
   nav {
     @include flexCenter();
     ul {

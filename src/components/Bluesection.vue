@@ -1,19 +1,19 @@
 <template>
   <div class="blue-section">
-
-     <nav>
+    <nav>
       <ul>
-        <span v-for="(icons, index) in icons" :key="index">
-          <img :src="'@/assets/images' + 'buy-comics-digital-comics.png'" 
-          alt="image">
-        <li v-for="(icon, index) in icons" :key="index">
-            {{ icon.name }}
+        <li>
+          <div class="elements" v-for="(icon, index) in icons" :key="index">
+            <div class="img">
+              <img :src="require(`../assets/img/${icon.image}`)" alt="image" />
+            </div>
+            <div class="text">
+              {{ icon.name }}
+            </div>
+          </div>
         </li>
-        </span>
       </ul>
     </nav>
-
-   
   </div>
 </template>
 
@@ -24,7 +24,7 @@ export default {
 
   data() {
     return {
-      icons: icons.icons
+      icons: icons.icons,
     };
   },
 };
@@ -35,16 +35,27 @@ export default {
 @import "@/style/mixins";
 @import "@/style/vars";
 
-.blue-section{
-  height: 18vh;
+.blue-section {
+  height: 15vh;
   color: white;
-  background-color: #1182F9;
+  background-color: #1182f9;
+  @include center();
 }
-nav ul{
-  display: flex;
-  flex-direction: row;
-  align-items: end;
-  justify-content: center;
+nav ul li {
+  padding: 10px;
+  @include center();
+}
+.text {
+  padding: 0 15px;
+}
+.elements{
+  @include center();
+  font-size: 70%;
+  padding: 10px;
+  img{
+    height: 40px;
+    width: 40px;
+  }
 }
 
 </style>

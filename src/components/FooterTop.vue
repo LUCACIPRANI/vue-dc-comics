@@ -1,8 +1,8 @@
 <template>
   <div class="background">
-    <div class="footer-top">
+    <div class="left-side">
       <div class="column">
-        <h4>DC COMICS</h4>
+        <h5>DC COMICS</h5>
         <ul>
           <li>Characters</li>
           <li>Comics</li>
@@ -12,14 +12,14 @@
           <li>Videos</li>
           <li>News</li>
         </ul>
-        <h4>SHOPS</h4>
+        <h5>SHOPS</h5>
         <ul>
           <li>Shop DC</li>
           <li>Shop DC Collectibles</li>
         </ul>
       </div>
       <div class="column">
-        <h4>DC</h4>
+        <h5>DC</h5>
         <ul>
           <li>Terms Of Use</li>
           <li>Provacy policy (New)</li>
@@ -35,7 +35,7 @@
         </ul>
       </div>
       <div class="column">
-        <h4>SITES</h4>
+        <h5>SITES</h5>
         <ul>
           <li>DC</li>
           <li>MAD Magazine</li>
@@ -44,6 +44,8 @@
           <li>DC Power Visa</li>
         </ul>
       </div>
+    </div>
+    <div class="right-side">
     </div>
   </div>
 </template>
@@ -56,19 +58,39 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+@import "@/style/mixins";
+@import "@/style/vars";
+
 .background{
-  background-image: "@/assets/images/bg.jpg";
+  @include flexStart();
+  background-image: url("../assets/img/footer-bg.jpg");
+  height: 36vh;
 }
-.footer-top {
-  width: 35%;
+.left-side {
+  float: left;
 }
 .column {
   float: left;
-  h4 {
+  text-align: left;
+  padding-left: 15px;
+  h5 {
     color: white;
+    margin: 8px 0;
   }
   ul li {
-    font-size: 80%;
+    font-size: 60%;
+    color: #888580;
+    line-height: 1.6em;
+    list-style: none;
+    text-decoration: none;
   }
+}
+.right-side{
+  background-image: url("../assets/img/dc-logo-bg.png");
+  margin-left: 25%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 420px;
+  width: 450px;
 }
 </style>

@@ -75,5 +75,25 @@ const icons = [
 
 ]
 
+const footerIcons = [
+    {
+        name: 'footer-facebook.png'
+    },
+    {
+        name: 'footer-twitter.png'
+    },
+    {
+        name: 'footer-youtube.png'
+    },
+    {
+        name: 'footer-pinterest.png'
+    },
+    {
+        name: 'footer-periscope.png'
+    },
+
+]
+
 export { features }
 export { icons }
+export {footerIcons}

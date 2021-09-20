@@ -18,7 +18,7 @@ export default {
 
 .content-section{
   background-color: #1C1C1C;
-  height: 15vh;
+  height: 12vh;
   color: white;
   @include flexStart();
 }

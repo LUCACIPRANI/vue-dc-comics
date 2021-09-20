@@ -9,3 +9,9 @@
     align-items: center;
     padding-left: 170px;
 }
+
+@mixin center($type: 'start') {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
