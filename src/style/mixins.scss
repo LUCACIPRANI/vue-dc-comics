@@ -1,0 +1,11 @@
+@mixin flexCenter($type: 'both') {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+@mixin flexStart($type: 'start') {
+    display: flex;
+    align-items: center;
+    padding-left: 170px;
+}
