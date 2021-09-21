@@ -57,6 +57,7 @@ export default {
   padding: 8px;
   font-size: 85%;
   margin-right: 210px;
+  @include hoverIcons();
 }
 .social-media {
   @include flexCenter();

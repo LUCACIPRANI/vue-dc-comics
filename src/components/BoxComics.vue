@@ -1,26 +1,25 @@
 <template>
   <div class="box-section">
-    <span class="h2">CURRENT SERIES</span>
-
     <div>
-      <CardsBoxComics
-        v-for="(box, index) in boxes"
-        :key="index"
-        :boxProp="box"
-      />
+      <span class="h2">CURRENT SERIES</span>
     </div>
-    
-  <div class="Load">
-    <span class="h3">
-      LOAD MORE
-    </span>
+    <!-- container cards  -->
+    <div>
+      <CardsBoxComics v-for="(box, index) in boxes" :key="index" :boxProp="box" />
+    </div>
+
+    <div class="load">
+      <span class="h3">
+        LOAD MORE
+      </span>
+    </div>
   </div>
-  </div>
+  
 </template>
 
 <script>
 import CardsBoxComics from "@/components/CardsBoxComics.vue";
-import boxes from "@/assets/data/features.js";
+import * as features from "../assets/data/features.js";
 
 export default {
   name: "BoxComics",
@@ -29,7 +28,7 @@ export default {
   },
   data() {
     return {
-      boxes: boxes,
+      boxes: features.boxes,
     };
   },
 };
@@ -41,20 +40,27 @@ export default {
 @import "@/style/vars";
 
 .box-section {
-  height: 10vh;
+  padding-bottom: 15px;
   background-color: #1c1c1c;
+  height: 500px;
+  position: relative;
+
   .h2 {
     @include btn();
     margin-left: 190px;
+    font-size: 110%;
   }
-  .Load{
-    @include center();
-    .h3{
-    @include btn();
-    font-size: 70%;
-    text-align: center;
+  .load {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .h3 {
+      @include btn();
+      font-size: 70%;
+      text-align: center;
+    }
   }
-  }
-  
 }
 </style>

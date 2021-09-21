@@ -10,10 +10,36 @@
     padding-left: 190px;
 }
 
-@mixin center($type: 'center') {
+@mixin center($type: 'both') {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row;
+
+    @if $type == 'horizontal' {
+        justify-content: center;
+    }
+    @else if $type == 'vertical' {
+        align-items: center;
+    }
+    @else if $type == 'both' {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@mixin centerColumn($type: 'both') {
+    display: flex;
+    flex-direction: column;
+
+    @if $type == 'horizontal' {
+        justify-content: center;
+    }
+    @else if $type == 'vertical' {
+        align-items: center;
+    }
+    @else if $type == 'both' {
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 @mixin btn($type: 'button') {
@@ -21,6 +47,17 @@
     background-color: $activeColor;
     border: 1px solid $activeColor;
     font-weight: 600;
-    padding: 10px;
+    padding: 10px 20px;
     width: 12%;
+    &:hover{
+        cursor: pointer;
+        opacity: 0.7;
+    }
+}
+
+@mixin hoverIcons($type: 'hover') {
+    &:hover{
+        cursor: pointer;
+        opacity: 0.7;
+    }
 }

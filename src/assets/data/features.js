@@ -179,8 +179,5 @@ const boxes = [
   },
 ];
 
-export { features };
-export { icons };
-export { footerIcons };
-export { boxes };
+export { features, icons, footerIcons, boxes };
 

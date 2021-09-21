@@ -1,14 +1,17 @@
 <template>
-  <div class="cards-section">
-    <img :src="boxProp.thumb" :alt="boxProp.type" />
-    <h5>{{ boxProp.series }}</h5>
+  <div class="container">
+    <span class="cards-section">
+      <img :src="boxProp.thumb" :alt="boxProp.type" />
+      <h5>{{ boxProp.series.toUpperCase() }}</h5>
+    </span>
   </div>
+  
 </template>
 
 <script>
 export default {
   name: "CardsBoxComics",
-  props: ['boxProp'],
+  props: ["boxProp"],
 };
 </script>
 
@@ -17,15 +20,29 @@ export default {
 @import "@/style/mixins";
 @import "@/style/vars";
 
-.cards-section {
-  height: 200px;
-  width: 50px;
-  border: 1px solid red;
-  float: left;
-  @include center();
+.container {
+  margin: 0 auto;
+  width: 73%;
+  margin-top: 30px;
 }
+.cards-section {
+  @include centerColumn();
+  height: 180px;
+  width: calc(100% / 6);
+  float: left;
+  text-align: center;
+
+  img {
+    height: 70%;
+    width: 150px;
+    object-fit: cover;
+  }
+}
+
 h5 {
   font-weight: 500;
+  font-size: 70%;
   color: white;
+  padding-top: 1em;
 }
 </style>
