@@ -7,11 +7,20 @@
 @mixin flexStart($type: 'start') {
     display: flex;
     align-items: center;
-    padding-left: 170px;
+    padding-left: 190px;
 }
 
-@mixin center($type: 'start') {
+@mixin center($type: 'center') {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@mixin btn($type: 'button') {
+    color: white;
+    background-color: $activeColor;
+    border: 1px solid $activeColor;
+    font-weight: 600;
+    padding: 10px;
+    width: 12%;
 }

@@ -48,14 +48,13 @@ nav ul li {
 .text {
   padding: 0 15px;
 }
-.elements{
+.elements {
   @include center();
   font-size: 70%;
   padding: 10px;
-  img{
-    height: 40px;
-    width: 40px;
+  img {
+    height: 50px;
+    width: 50px;
   }
 }
-
 </style>

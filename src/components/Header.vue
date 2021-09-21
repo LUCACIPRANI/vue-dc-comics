@@ -5,8 +5,7 @@
       <ul>
         <li v-for="(feature, index) in features" :key="index">
           <a :class="feature.current ? 'active' : null" href="feature.url">
-            {{ feature.name }}
-            <!-- <span class="blue-bar"></span> -->
+            {{ feature.name.toUpperCase() }}
           </a>
         </li>
       </ul>
@@ -35,7 +34,6 @@ export default {
 
 .header {
   background-color: white;
-  color: #000;
   font-weight: 500;
   padding: 10px 0;
   nav {
@@ -43,17 +41,20 @@ export default {
     ul {
       @include flexCenter();
       li {
-        padding: 1rem;
+        padding: 0.6rem;
         font-size: 65%;
         list-style: none;
         a {
           list-style: none;
           text-decoration: none;
-          color: #736A7F;
+          color: #736a7f;
+          font-weight: 700;
+          padding: 33px 0;
 
           &:hover,
           &.active {
             color: $activeColor;
+            border-bottom: 6px solid $activeColor;
           }
         }
       }

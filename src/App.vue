@@ -1,21 +1,18 @@
 <template>
   <div id="app">
-    <!-- header  -->
     <Header />
-    <!-- content  -->
-    <Content />
-    <!-- blu icons  -->
+    <Jumbotron />
+    <BoxComics />
     <Bluesection />
-    <!-- footer top  -->
     <FooterTop />
-    <!-- footer down  -->
     <FooterDown />
   </div>
 </template>
 
 <script>
 import Header from "./components/Header.vue";
-import Content from "./components/Content.vue";
+import Jumbotron from "./components/Jumbotron.vue";
+import BoxComics from "./components/BoxComics.vue";
 import Bluesection from "./components/Bluesection.vue";
 import FooterTop from "./components/FooterTop.vue";
 import FooterDown from "./components/FooterDown.vue";
@@ -24,7 +21,8 @@ export default {
   name: "App",
   components: {
     Header,
-    Content,
+    Jumbotron,
+    BoxComics,
     Bluesection,
     FooterTop,
     FooterDown,
@@ -36,10 +34,7 @@ export default {
 @import "./style/generals";
 @import "./style/vars";
 
-#app {
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+// #app {
 
-}
+// }
 </style>

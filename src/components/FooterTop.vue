@@ -45,8 +45,7 @@
         </ul>
       </div>
     </div>
-    <div class="right-side">
-    </div>
+    <div class="right-side"></div>
   </div>
 </template>
 
@@ -61,7 +60,7 @@ export default {
 @import "@/style/mixins";
 @import "@/style/vars";
 
-.background{
+.background {
   @include flexStart();
   background-image: url("../assets/img/footer-bg.jpg");
   height: 36vh;
@@ -72,7 +71,7 @@ export default {
 .column {
   float: left;
   text-align: left;
-  padding-left: 15px;
+  padding-right: 15px;
   h5 {
     color: white;
     margin: 8px 0;
@@ -85,7 +84,7 @@ export default {
     text-decoration: none;
   }
 }
-.right-side{
+.right-side {
   background-image: url("../assets/img/dc-logo-bg.png");
   margin-left: 25%;
   background-size: contain;
