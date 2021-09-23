@@ -17,6 +17,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+@import "@/style/generals";
 @import "@/style/mixins";
 @import "@/style/vars";
 
@@ -28,11 +29,5 @@ export default {
   background-image: url("../assets/img/jumbotron.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  // &:before{
-  //   content: '--->';
-  // }
-  // &:after{
-  //   content: '<---';
-  // }
 }
 </style>

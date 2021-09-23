@@ -3,9 +3,12 @@
     <div>
       <span class="h2">CURRENT SERIES</span>
     </div>
-    <!-- container cards  -->
     <div>
-      <CardsBoxComics v-for="(box, index) in boxes" :key="index" :boxProp="box" />
+      <CardsBoxComics
+        v-for="(box, index) in boxes"
+        :key="index"
+        :boxProp="box"
+      />
     </div>
 
     <div class="load">
@@ -14,7 +17,6 @@
       </span>
     </div>
   </div>
-  
 </template>
 
 <script>
@@ -36,6 +38,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+@import "@/style/generals";
 @import "@/style/mixins";
 @import "@/style/vars";
 

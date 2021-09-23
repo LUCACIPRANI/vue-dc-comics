@@ -40,8 +40,10 @@ export default {
 <style scoped lang="scss">
 @import "@/style/mixins";
 @import "@/style/vars";
+@import "@/style/generals";
 
 .footer-Down {
+  // z-index: 3;
   background-color: #303030;
   height: 10vh;
   @include flexCenter();
